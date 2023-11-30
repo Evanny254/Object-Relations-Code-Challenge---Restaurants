@@ -24,10 +24,17 @@ class Restaurant:
 
 
 # Example
-# Create an instance of the Restaurant class
-restaurant = Restaurant("Pepinos")
+restaurant1 = Restaurant("Pepinos")
+restaurant2 = Restaurant("Sushi Delight")
 
-# Print information about the restaurant and its reviews
-print(f"Restaurant Name: {restaurant.get_name()}")
-print(f"Customers: {restaurant.customers()}")
-print(f"Average Star Rating: {restaurant.average_star_rating()}")
+review1 = Review("Kevo", restaurant1, 4)
+review2 = Review("Chris", restaurant1, 5)
+review3 = Review("Jay", restaurant1, 3)
+review4 = Review("David", restaurant2, 2)
+review5 = Review("Emma", restaurant2, 4)
+review6 = Review("Frank", restaurant2, 5)
+
+
+print(f"Restaurant Name: {restaurant2.get_name()}")
+print(f"Customers: {restaurant2.customers()}")
+print(f"Average Star Rating: {restaurant1.average_star_rating()}")

@@ -41,14 +41,23 @@ class Customer:
 # Example:
 customer1 = Customer("Dean", "Socrates")
 customer2 = Customer("Johnnie", "Walker")
+customer3 = Customer("Mike", "Johnson")
+customer4 = Customer("Barrack", "Obama")
 
 restaurant1 = Restaurant("Kwa Mathee")
 restaurant2 = Restaurant("Fogo Gaucho")
+restaurant3 = Restaurant("Sushi World")
+restaurant4 = Restaurant("Pizza Haven")
 
 customer1.add_review(restaurant1, 4)
-customer1.add_review(restaurant2, 5)
-customer2.add_review(restaurant1, 3)
+customer2.add_review(restaurant2, 5)
+customer3.add_review(restaurant1, 3)
+customer4.add_review(restaurant3, 4)
+customer2.add_review(restaurant4, 5)
+customer3.add_review(restaurant3, 4)
 
-print(customer1.restaurants())  
-print(restaurant1.customers())  
-print(restaurant1.average_star_rating())  
+
+print(customer1.restaurants())
+print(restaurant1.customers())
+print(f"Average Star Rating for {restaurant1.get_name()}: {restaurant1.average_star_rating()}")
+

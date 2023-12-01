@@ -6,7 +6,6 @@ class Review:
         self.restaurant_ = restaurant
         self.rating_ = rating
         Review.all_reviews.append(self)
-       
 
     def rating(self):
         return self.rating_

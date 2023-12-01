@@ -35,6 +35,6 @@ review5 = Review("Emma", restaurant2, 4)
 review6 = Review("Frank", restaurant2, 5)
 
 
-print(f"Restaurant Name: {restaurant2.get_name()}")
+print(f"Restaurant Name: {restaurant1.get_name()}")
 print(f"Customers: {restaurant2.customers()}")
 print(f"Average Star Rating: {restaurant1.average_star_rating()}")

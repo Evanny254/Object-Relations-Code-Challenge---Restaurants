@@ -38,7 +38,7 @@ class Customer:
     def find_all_by_given_name(cls, given_name):
         return [customer for customer in cls.all_customers if customer.given_name == given_name]
     
-# Example:
+# Example usage:
 customer1 = Customer("Dean", "Socrates")
 customer2 = Customer("Johnnie", "Walker")
 customer3 = Customer("Mike", "Johnson")
@@ -56,8 +56,6 @@ customer4.add_review(restaurant3, 4)
 customer2.add_review(restaurant4, 5)
 customer3.add_review(restaurant3, 4)
 
-
-print(customer1.restaurants())
-print(restaurant1.customers())
+print("Restaurants reviewed by customer1:", [restaurant.get_name() for restaurant in customer1.restaurants()])
+print("Customers who reviewed restaurant1:", [customer.full_name() for customer in restaurant1.customers()])
 print(f"Average Star Rating for {restaurant1.get_name()}: {restaurant1.average_star_rating()}")
-

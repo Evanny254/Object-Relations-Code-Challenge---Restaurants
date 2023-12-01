@@ -1,5 +1,4 @@
 # Object-Relations-Code-Challenge---Restaurants
-
 This Python code provides a simple implementation of a Restaurant Review System with classes for `Customer`, `Restaurant`, and `Review`. The system allows customers to add reviews for restaurants, and it provides methods to retrieve information about reviews, customers, and restaurants.
 
 
@@ -49,19 +48,27 @@ The `Review` class represents a review given by a customer for a restaurant.
 
 ## Example Usage
 
-customer1 = Customer("Evans", "Kurgat")
-customer2 = Customer("Dean", "Socrates")
+customer1 = Customer("Dean", "Socrates")
+customer2 = Customer("Johnnie", "Walker")
+customer3 = Customer("Mike", "Johnson")
+customer4 = Customer("Barrack", "Obama")
 
-restaurant1 = Restaurant("Fogo Gaucho")
-restaurant2 = Restaurant("Pride Inn")
+restaurant1 = Restaurant("Kwa Mathee")
+restaurant2 = Restaurant("Fogo Gaucho")
+restaurant3 = Restaurant("Sushi World")
+restaurant4 = Restaurant("Pizza Haven")
 
 customer1.add_review(restaurant1, 4)
-customer1.add_review(restaurant2, 5)
-customer2.add_review(restaurant1, 3)
+customer2.add_review(restaurant2, 5)
+customer3.add_review(restaurant1, 3)
+customer4.add_review(restaurant3, 4)
+customer2.add_review(restaurant4, 5)
+customer3.add_review(restaurant3, 4)
 
-print(customer1.restaurants())  # Output: [Fogo Gaucho, Pride Inn]
-print(restaurant1.customers())  # Output: [Evans Kurgat, Dean Socrates]
-print(restaurant1.average_star_rating())  # Output: 3.5
+print("Restaurants reviewed by customer1:", [restaurant.get_name() for restaurant in customer1.restaurants()]) # Output: Restaurants reviewed by customer1: ['Kwa Mathee']
+print("Customers who reviewed restaurant1:", [customer.full_name() for customer in restaurant1.customers()])  # Output: Customers who reviewed restaurant1: ['Dean Socrates', 'Mike Johnson']
+print(f"Average Star Rating for {restaurant1.get_name()}: {restaurant1.average_star_rating()}") # Output: Average Star Rating for Kwa Mathee: 3.5
+
 
 ## Project Structure 
 
